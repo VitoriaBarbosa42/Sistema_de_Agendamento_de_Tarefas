@@ -1,0 +1,1 @@
+# Funções utilitárias (ex: uma função para validar entrada do usuário, ou para exibir tarefas formatadas)
