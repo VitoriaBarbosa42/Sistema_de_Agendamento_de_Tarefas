@@ -12,23 +12,40 @@ from Tarefas import solicitat_id
 
 while True:
     inicio = menu_principal()
-    lista_tarefas = {}
 
     if inicio == '1':
         lista_tarefas = criar()
 
-    elif inicio == '2':
-        print(ler(lista_tarefas))
+    if inicio == '2':
+        try:
+            ler(lista_tarefas)
+        except NameError:
+            print ('Não há tarefas. Adicionear primeiro para vizualiza-las')
         
-    elif inicio == '3':
-        id = solicitat_id
-        atualizar(lista_tarefas, id)
+    if inicio == '3':
+        try:
+            id = solicitat_id(lista_tarefas)
+            if id:
+                atualizar(lista_tarefas, id)
+            else:
+                print('Voltando ao menu principal')
+        except NameError:
+            print ('Não há tarefas. Adicionear primeiro para atualiza-las')
 
+    if inicio == '4':
+        try:
+            for chave, valor in lista_tarefas.items():
+                print (chave, valor)
+            id = solicitat_id(lista_tarefas)
+            if id:
+                excluir(lista_tarefas, id)
+                for chave, valor in lista_tarefas.items():
+                    print (chave, valor)
+            else:
+                print('Voltando ao menu principal')
+        except NameError:
+            print ('Não há tarefas. Adicionear primeiro para excluir')
 
-    elif inicio == '4':
-        id = solicitat_id
-        excluir()
-
-    elif '5':
+    elif inicio == '5':
         print('ATÉ A PROXIMA! :)')
         break

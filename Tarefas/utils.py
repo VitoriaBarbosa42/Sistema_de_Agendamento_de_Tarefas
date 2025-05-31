@@ -1,12 +1,12 @@
 # Funções utilitárias (ex: uma função para validar entrada do usuário, ou para exibir tarefas formatadas)
 
 def menu_principal():
-    print ('BEM VINDO AO GERENCIADOR DE TAREFAS :)')
+    print ('MENU PRINCIPAL DO GERENCIADOR DE TAREFAS :)')
     print('_________________________________________')
 
     while True:
         print('Escolha uma opção abaixo: ')
-        inicio = input('[1] Criar novas tarefas [2] Ver tarefas [3] Atualizar tarefa [4] Excluir tarefas [5] Sair')
+        inicio = input('[1] Criar novas tarefas [2] Ver tarefas [3] Atualizar tarefa [4] Excluir tarefas [5] Sair: ')
         if len(inicio) == 0:
             print('Digite um valor para continuar')
         elif len(inicio) == 1 and inicio in '12345':
@@ -34,10 +34,15 @@ def menu_principal():
             print('Opção invalida. Tente novamente')
             print()
 
-def solicitat_id():
+def solicitat_id(dicionario):
     try:    
-        id = int(input('Digite o ID que você gostaria de condultar: '))
+        id = int(input('Digite o ID que você gostaria de consultar: '))
+        print (dicionario[id])
         return id
-    except ValueError:
+    except KeyError:
         print ('ID invalido')
+    except ValueError:
+        print ('ID não identicado')
+    except NameError:
+        print ('Não tem itens na sua lista')
 
