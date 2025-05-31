@@ -42,7 +42,7 @@ def solicitat_id(dicionario):
     except KeyError:
         print ('ID invalido')
     except ValueError:
-        print ('ID não identicado')
+        print ('ID não identificado')
     except NameError:
         print ('Não tem itens na sua lista')
 

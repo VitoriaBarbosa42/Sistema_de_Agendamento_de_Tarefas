@@ -20,7 +20,7 @@ while True:
         try:
             ler(lista_tarefas)
         except NameError:
-            print ('Não há tarefas. Adicionear primeiro para vizualiza-las')
+            print ('Não há tarefas. Adicione-as primeiro para vizualizá-las')
         
     if inicio == '3':
         try:
@@ -30,7 +30,7 @@ while True:
             else:
                 print('Voltando ao menu principal')
         except NameError:
-            print ('Não há tarefas. Adicionear primeiro para atualiza-las')
+            print ('Não há tarefas. Adicione-as primeiro para atualiza-las')
 
     if inicio == '4':
         try:
@@ -44,7 +44,7 @@ while True:
             else:
                 print('Voltando ao menu principal')
         except NameError:
-            print ('Não há tarefas. Adicionear primeiro para excluir')
+            print ('Não há tarefas. Adicione-as primeiro para excluir')
 
     elif inicio == '5':
         print('ATÉ A PROXIMA! :)')

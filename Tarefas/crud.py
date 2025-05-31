@@ -10,7 +10,7 @@ def criar():
             if len(tarefa) == 0:
                 print('Digite algo para continuar ')
             else:
-                print(f'Tarefa armezenada: {tarefa} ')
+                print(f'Tarefa armazenada: {tarefa} ')
                 status = 'pendente'
                 dicionario.update({id : {'tarefa': tarefa, 'status': status}})
                 break
