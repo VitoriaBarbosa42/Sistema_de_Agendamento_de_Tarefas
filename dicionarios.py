@@ -21,6 +21,7 @@ while True:
             ler(lista_tarefas)
         except NameError:
             print ('Não há tarefas. Adicione-as primeiro para vizualizá-las')
+            print()
         
     if inicio == '3':
         try:
@@ -29,22 +30,28 @@ while True:
                 atualizar(lista_tarefas, id)
             else:
                 print('Voltando ao menu principal')
+                print()
         except NameError:
             print ('Não há tarefas. Adicione-as primeiro para atualiza-las')
+            print()
 
     if inicio == '4':
         try:
             for chave, valor in lista_tarefas.items():
                 print (chave, valor)
+            print()
             id = solicitat_id(lista_tarefas)
             if id:
                 excluir(lista_tarefas, id)
                 for chave, valor in lista_tarefas.items():
                     print (chave, valor)
+                print()
             else:
                 print('Voltando ao menu principal')
+                print()
         except NameError:
             print ('Não há tarefas. Adicione-as primeiro para excluir')
+            print()
 
     elif inicio == '5':
         print('ATÉ A PROXIMA! :)')
