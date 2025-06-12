@@ -9,12 +9,17 @@ from Tarefas import ler
 from Tarefas import atualizar
 from Tarefas import excluir
 from Tarefas import solicitat_id
+from Tarefas import salvar
+import json
+
+id = 0
+dicionario = {}
 
 while True:
     inicio = menu_principal()
 
     if inicio == '1':
-        lista_tarefas = criar()
+        lista_tarefas = criar(id, dicionario)
 
     if inicio == '2':
         try:
@@ -54,5 +59,6 @@ while True:
             print()
 
     elif inicio == '5':
+        salvar(dicionario)
         print('ATÉ A PROXIMA! :)')
         break

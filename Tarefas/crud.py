@@ -1,8 +1,6 @@
 # crud.py: Funções para Criar, Ler, Atualizar e Excluir tarefas.
 
-def criar():
-    id = 0
-    dicionario = {}
+def criar(id, dicionario):
     while True:
         id += 1 
         while True:
